@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about page</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://fonts.google.com/specimen/Anton" rel="stylesheet">
+</head>
+<body>
+    <div class="top-navbar">
+        <p>WELCOME TO QUALITY EDUCATION</p>
+        <div class="icons">
+            <a href="login.html"><img src="images/register.png" alt="" width="18px">Login</a>
+            <a href="register.html"><img src="images/register.png" alt="" width="18px">Register</a>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg" id="navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html" id="logo"><span id="span1"> QUALITY </span> <span> EDUCATION </span></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span><img src="images/menu.png" alt="" width="30px"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="courses.html">Courses</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Category
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: rgb(67 0 86);">
+                  <li><a class="dropdown-item" href="#">B.E./ B.Tech</a></li>
+                  <li><a class="dropdown-item" href="#">Architecture</a></li>
+                  <li><a class="dropdown-item" href="#">BBA</a></li>
+                  <li><a class="dropdown-item" href="#">M.Sc</a></li>
+                  <li><a class="dropdown-item" href="#">Agriculture</a></li>
+                  <li><a class="dropdown-item" href="#">MBA</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+            <form class="d-flex" id="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    <div class="container" id="about">
+        <h3>QUALITY Education</h3>
+        <hr>
+        <div class="row" style="margin-top: 50px;">
+            <div class="col-md-5 py-3 py-md-0">
+                <div class="card">
+                    <img src="images/d1.jpeg" alt="">
+                </div>
+            </div>
+            <div class="col-md-7 py-3 py-md-0">
+                <div id="hidden-content">
+                  <p>Quality is doing the right things right and Quality education leads to an excellent student education. The future of the country depends on a quality education being provided in every school and it plays a major role in the student education.</p>
+
+                    <p>Quality is at the heart of education, Alternatively Performance in licensure examinations is not the only measure of quality education. The quantity and quality of school inputs the effectiveness of the curriculum and teaching methods and the quality of the school and home environment. The power of transforming the society is from quality education. </p>
+                    <p>Education is the most powerful weapon which you can use to change the world that’s why its quality is very important it is what you remember and use after you have forgotten what you learned because without education you can’t go anywhere. To have a good quality education, Pay for it.
+                    Quality education therefore implies looking into what desirable changes the educational institute wants to make in each student. Setting a high standard and help the student work toward them. It is important not to pressure any student when doing this. That is what a quality education is all about.</p>
+              </div>
+              <button onclick="toggleContent()">Read More</button>
+
+              <script>
+                function toggleContent() {
+                    var hiddenContent = document.getElementById("hidden-content");
+                    var buttonText = document.querySelector("button");
+        
+                    if (hiddenContent.style.display === "none") {
+                      hiddenContent.style.display = "block";
+                        buttonText.innerHTML = "Read More";
+                    } else {
+                        hiddenContent.style.display = "none";
+                        buttonText.innerHTML = "Read Less";
+                    }
+                }
+            </script>
+            </div>
+        </div>
+    </div>
+    
+    <section id="about">
+      <h3>About Us</h3>
+      <article class="about-section">
+          <h4>Our Mission</h4>
+          <p>We are dedicated to providing high-quality education that fosters intellectual growth and prepares students for success in a rapidly changing world.</p>
+      </article>
+
+      
+      <article class="about-section">
+          <h4>Our Faculty</h4>
+          <p>Our experienced and passionate faculty members are committed to inspiring and guiding students on their educational journey.</p>
+      </article>
+
+      
+      <article class="about-section">
+          <h4>State-of-the-Art Campus Facilities</h4>
+          <p>Explore our modern campus equipped with facilities, libraries, and collaborative spaces for a conducive learning environment.</p>
+      </article>
+  </section>
+</main>
+
+    <div class="container" id="newslater">
+      <h3 class="text-center">Subscribe To Our Quality Education For Latest upload.</h3>
+      <div class="input text-center">
+        <input type="text" placeholder="Enter Your Email..">
+        <button id="subscribe">SUBSCRIBE</button>
+      </div>
+    </div>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+      document.getElementById("subscribe").addEventListener("click", function () {
+          subscribe();
+      });
+  });
+
+  function subscribe() {
+      var emailInputValue = document.getElementById("subscribe").value;
+
+      if (emailInputValue.trim() === "") {
+          alert("enter your email");
+      } else {
+          // You can add additional validation or send the subscription data to the server here
+          alert("Subscribed successfully! Thank you for subscribing to Quality Education.");
+      }
+  }
+</script>
+
+
+
+    <footer id="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+
+            <div class="col-lg-3 col-md-6 footer-contact">
+              <h3>QUALITY Education</h3>
+              
+              <strong>Phone:</strong> +917000000000 <br>
+              <strong>Email:</strong> qualityeducation@gmail.com <br>
+            </div>
+
+            <div class="col-lg-3 col-md-6 footer-links">
+              <h4>Usefull Links</h4>
+             <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Privacy policey</a></li>
+             </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 footer-links">
+              <h4>Our Social Networks</h4>
+                <div class="socail-links">
+                  <a href="instagram"></a>
+                  <a href="linkedin"></a>
+                  <a href="twitter"></a>
+                  <a href="pinterest"></a>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="container py-4">
+        <div class="copyright">
+          &copy; Copyright <strong><span>QUALITY Education</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+        </div>
+      </div>
+    </footer>
+    <a href="#" class="arrow"><i><img src="images/arrow.png" alt=""></i></a>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
